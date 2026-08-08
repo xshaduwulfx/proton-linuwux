@@ -1,3 +1,18 @@
+/*
+ * Copyright (C) LinUwUx
+ * Copyright (C) 2026 brcly
+ *
+ * Derived from: https://github.com/brcly/proton-LinUwUx-patch
+ * Original LinUwUx patch concept and guidance: LinUwUx.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
 /* linuwux-hooks
  *
  * All LinUwUx unix-side helpers for ntdll. Copied next to signal_x86_64.c and
