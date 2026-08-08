@@ -1,0 +1,16 @@
+scripts/linuwux/ — provenance
+==============================
+
+Modular hook sources and related fragments in this directory are derived from:
+
+  https://github.com/brcly/proton-LinUwUx-patch
+  License: GNU Affero General Public License v3 (or later)
+
+Copyright (C) LinUwUx
+Copyright (C) 2026 brcly
+
+linuwux_hooks_legacy.c is primarily authored by Kurt Himebauch
+(xXJSONDeruloXx), based on the LinUwUx work, with repository integration
+by brcly.
+
+Upstream Proton / Wine retain their own licenses.
