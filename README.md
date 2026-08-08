@@ -46,6 +46,12 @@ The patch originates from the relevant discussion on [cs.rin.ru](https://cs.rin.
 > These builds contain no additional performance tweaks or unrelated changes.  
 > The only project-specific modification is the application of the original `LinUwUx.patch` developed by **LinUwUx**.
 
+### Experimental modular hooks
+
+The sources under `scripts/linuwux/` on the `experimental` branch are derived
+from [brcly/proton-LinUwUx-patch](https://github.com/brcly/proton-LinUwUx-patch)
+(AGPL-3.0), based on the original LinUwUx work. See `scripts/linuwux/NOTICE`.
+
 ## Features
 
 - Automatically tracks new upstream Proton-GE and Proton-CachyOS releases.
@@ -173,6 +179,8 @@ All trademarks and project names belong to their respective owners.
 ## Credits
 
 - **LinUwUx** (original patch author)
+- **[brcly/proton-LinUwUx-patch](https://github.com/brcly/proton-LinUwUx-patch)** (modular hooks under `scripts/linuwux/` on experimental)
+- **Kurt Himebauch** (legacy Reflex hooks)
 - **DenuvOwO Team**
 - **GloriousEggroll**
 - **CachyOS Team**
