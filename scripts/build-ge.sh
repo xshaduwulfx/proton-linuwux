@@ -4,7 +4,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-WORKDIR="$ROOT_DIR/work"
+WORKDIR="/mnt/hdd2tb/proton-linuwux-work"
 OUTPUT="$ROOT_DIR/output"
 
 mkdir -p "$WORKDIR"
@@ -70,28 +70,20 @@ echo "== Preparazione Proton =="
 
 ./patches/protonprep-valve-staging.sh
 
-echo "== Applicazione LinUwUx.patch =="
+echo "== Applicazione LinUwUx experimental =="
 
-PATCH_FILE="$ROOT_DIR/LinUwUx.patch"
+EXPERIMENTAL_SCRIPT="$ROOT_DIR/scripts/linuwux/apply-experimental.sh"
 
-if [[ ! -f "$PATCH_FILE" ]]
+if [[ ! -f "$EXPERIMENTAL_SCRIPT" ]]
 then
-    echo "Errore: LinUwUx.patch non trovato:"
-    echo "$PATCH_FILE"
+    echo "Errore: apply-experimental.sh non trovato:"
+    echo "$EXPERIMENTAL_SCRIPT"
     exit 1
 fi
 
-echo "Verifica preliminare della patch..."
+bash "$EXPERIMENTAL_SCRIPT" "$WORKDIR/proton-ge-custom"
 
-if ! patch --dry-run -p1 < "$PATCH_FILE"
-then
-    echo "Errore: LinUwUx.patch non è compatibile con questa versione di Proton-GE."
-    exit 1
-fi
-
-patch -p1 < "$PATCH_FILE"
-
-echo "LinUwUx.patch applicata correttamente."
+echo "LinUwUx experimental applicato correttamente."
 
 echo "== Configurazione build =="
 
